@@ -1,13 +1,21 @@
-#![doc(html_root_url = "https://docs.rs/crate/dxlib_sample_0001/0.0.2")]
+#![doc(html_root_url = "https://docs.rs/crate/dxlib_sample_0001/0.0.3")]
 //! sample dxlib dll for Rust
+//!
+//! see also https://docs.rs/dxlib/latest/dxlib/dx
+//!
+//! compile .hlsl to .vso and .pso by ShaderCompiler distributed with DxLib
+//!
+//! - ShaderCompiler /Tvs_4_0 shader_VS.hlsl
+//! - ShaderCompiler /Tps_4_0 shader_PS.hlsl
 //!
 
 use std::error::Error;
 
-use dxlib::{*, dx::*};
+use dxlib::demo;
 
 pub fn main() -> Result<(), Box<dyn Error>> {
-  dum_screen();
+//  demo::typ::screen("./resource/")?;
+  demo::dum::screen("./resource/");
   Ok(())
 }
 
@@ -15,11 +23,13 @@ pub fn main() -> Result<(), Box<dyn Error>> {
 #[cfg(test)]
 mod tests {
   // use super::*;
-  use dxlib::dum_screen;
+  use dxlib::demo;
 
-  /// test a
+  /// test screen
   #[test]
-  fn test_a() {
-    assert_eq!(dum_screen(), ());
+  fn test_screen() {
+    // either typ or dum at once
+//    assert_eq!(demo::typ::screen("./resource/").expect("init"), ());
+    assert_eq!(demo::dum::screen("./resource/"), ());
   }
 }
