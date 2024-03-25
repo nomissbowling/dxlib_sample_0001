@@ -1,4 +1,4 @@
-#![doc(html_root_url = "https://docs.rs/crate/dxlib_sample_0001/0.0.4")]
+#![doc(html_root_url = "https://docs.rs/crate/dxlib_sample_0001/0.0.7")]
 //! sample dxlib dll for Rust
 //!
 //! see also https://docs.rs/dxlib/latest/dxlib/dx
@@ -14,8 +14,8 @@ use std::error::Error;
 use dxlib::demo;
 
 pub fn main() -> Result<(), Box<dyn Error>> {
-//  demo::typ::screen("./resource/")?;
-  demo::dum::screen("./resource/");
+  demo::typ::screen("./resource/")?;
+//  demo::dum::screen("./resource/");
   Ok(())
 }
 
@@ -29,7 +29,7 @@ mod tests {
   #[test]
   fn test_screen() {
     // either typ or dum at once
-//    assert_eq!(demo::typ::screen("./resource/").expect("init"), ());
-    assert_eq!(demo::dum::screen("./resource/"), ());
+    assert_eq!(demo::typ::screen("./resource/").expect("init"), ());
+//    assert_eq!(demo::dum::screen("./resource/"), ());
   }
 }
