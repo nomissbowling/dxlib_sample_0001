@@ -1,6 +1,6 @@
 [package]
 name = "dxlib_sample_0001"
-version = "0.3.3" # change with html_root_url in main.rs
+version = "0.3.4" # change with html_root_url in main.rs
 edition = "2021"
 authors = ["nomissbowling <nomissbowling@yahoo.co.jp>"]
 
@@ -18,4 +18,4 @@ readme = "README.md"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-dxlib = { version = "0.3.3" }
+dxlib = { version = "0.3.4" }
