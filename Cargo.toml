@@ -19,3 +19,9 @@ readme = "README.md"
 
 [dependencies]
 dxlib = { version = "0.3.4" }
+#dxlib = { path = "c:/prj/dxlib" }
+
+Fullerene = { version = "0.1.1" } # "0.1.1"
+#Fullerene = { path = "c:/prj/fullerene" }
+
+num = { version = "0.4" } # "0.4.1"
